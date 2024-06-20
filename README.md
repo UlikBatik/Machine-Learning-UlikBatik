@@ -2,11 +2,7 @@
 
 ## Download dataset
 
-You can download our resources in [Google Drive]() or via Terminal.
-```
-wget 
-```
-After downloading, you need to unzip it into the root directory of your project.
+You can download our resources in [Google Drive](https://drive.google.com/file/d/1iIJ39YDNNrpWgg-N3-ghFuErZ4Cg9hp9/view?usp=sharing). After downloading, you need to unzip it into the root directory of your project.
 
 ## Install requirements
 
