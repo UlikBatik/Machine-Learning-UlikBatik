@@ -29,8 +29,6 @@ class ContentBasedRecommender:
         # Membuat variable untuk mengecek apakah postingan belum pernah disukai user
         self.user_post_set = set(zip(self.data['USERID'], self.data['POSTID']))
 
-        # Membuat variable untuk mengecek apakah postingan 
-        self.user_own_posts = set(zip(self.data['USERID'], self.data['POSTID']))
 
 
     def get_recommendations(self, user_id, top_n=10):
@@ -49,7 +47,7 @@ class ContentBasedRecommender:
         # Iterate over all unique posts
         for post_id, post_label in self.unique_posts.itertuples(index=False):
             # Mengecek apakah user belum pernah menyukai postingan tersebut
-            if (user_id, post_id) not in self.user_post_set and (user_id, post_id) not in self.user_own_posts:
+            if (user_id, post_id) not in self.user_post_set:
                 # Transform the post label using the same TF-IDF vectorizer
                 post_tfidf = self.vectorizer.transform([post_label])
 
